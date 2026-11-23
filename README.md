@@ -1,4 +1,4 @@
-# Landing Page — Atendimento via WhatsApp
+# EMPREST-SCARFACE — Atendimento via WhatsApp
 
 Landing page de atendimento via WhatsApp, configurada para deploy em Coolify com Traefik.
 
@@ -6,8 +6,8 @@ Landing page de atendimento via WhatsApp, configurada para deploy em Coolify com
 
 - **Framework**: Next.js 14 (App Router, JavaScript)
 - **Deployment**: Coolify + Traefik
-- **Meta Pixel**: `1325454299634632` (Core Config compliance)
-- **WhatsApp**: `62 9830-6782`
+- **Meta Pixel**: `1591782272985111` (Core Config compliance)
+- **WhatsApp**: `+55 31 97112-2531`
 
 ## Instalação Local
 

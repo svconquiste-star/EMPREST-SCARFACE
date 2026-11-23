@@ -1,8 +1,8 @@
-// Cria a tabela "contact_kayq_goias" no schema Dados_Cliente_Emprest (idempotente).
+// Cria a tabela "contact_emprest_scarface" no schema Dados_Cliente_Emprest (idempotente).
 // Uso: node --env-file=.env.local scripts/init-db.js
 const { PrismaClient } = require('@prisma/client');
 const prisma = new PrismaClient();
-const T = '"Dados_Cliente_Emprest"."contact_kayq_goias"';
+const T = '"Dados_Cliente_Emprest"."contact_emprest_scarface"';
 
 async function main() {
   await prisma.$executeRawUnsafe(`
@@ -21,15 +21,15 @@ async function main() {
       "ipAddress"       VARCHAR(45),
       "userAgent"       TEXT
     )`);
-  await prisma.$executeRawUnsafe(`CREATE INDEX IF NOT EXISTS "contact_kayq_goias_telefone_idx"  ON ${T}("telefone")`);
-  await prisma.$executeRawUnsafe(`CREATE INDEX IF NOT EXISTS "contact_kayq_goias_email_idx"     ON ${T}("email")`);
-  await prisma.$executeRawUnsafe(`CREATE INDEX IF NOT EXISTS "contact_kayq_goias_createdAt_idx" ON ${T}("createdAt")`);
+  await prisma.$executeRawUnsafe(`CREATE INDEX IF NOT EXISTS "contact_emprest_scarface_telefone_idx"  ON ${T}("telefone")`);
+  await prisma.$executeRawUnsafe(`CREATE INDEX IF NOT EXISTS "contact_emprest_scarface_email_idx"     ON ${T}("email")`);
+  await prisma.$executeRawUnsafe(`CREATE INDEX IF NOT EXISTS "contact_emprest_scarface_createdAt_idx" ON ${T}("createdAt")`);
 
   const cols = await prisma.$queryRawUnsafe(`
     SELECT column_name, data_type FROM information_schema.columns
-    WHERE table_schema = 'Dados_Cliente_Emprest' AND table_name = 'contact_kayq_goias'
+    WHERE table_schema = 'Dados_Cliente_Emprest' AND table_name = 'contact_emprest_scarface'
     ORDER BY ordinal_position`);
-  console.log('✓ Tabela contact_kayq_goias pronta:');
+  console.log('✓ Tabela contact_emprest_scarface pronta:');
   cols.forEach((c) => console.log(`  - ${c.column_name} (${c.data_type})`));
 }
 

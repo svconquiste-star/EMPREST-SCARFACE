@@ -25,7 +25,7 @@ model Contact {
   ipAddress       String?   @db.VarChar(45)
   userAgent       String?   @db.Text
 
-  @@map("contact_kayq_goias")
+  @@map("contact_emprest_scarface")
   @@index([telefone])
   @@index([email])
   @@index([createdAt])

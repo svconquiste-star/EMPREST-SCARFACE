@@ -16,7 +16,7 @@ const merriweather = Merriweather({
   display: 'swap',
 });
 
-const PIXEL_CLIENTE = '2591327077982060';
+const PIXEL_CLIENTE = '1591782272985111';
 const PIXEL_GERAL_EMPRESTIMO = '1270209555097956';
 
 export const metadata = {
